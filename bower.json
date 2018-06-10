@@ -1,0 +1,24 @@
+{
+  "name": "Vue-Crud",
+  "authors": [
+    "Allanwelerson <allanwelerson@gmail.com>"
+  ],
+  "description": "Crud with VueJs",
+  "main": "",
+  "keywords": [
+    "vuesj"
+  ],
+  "license": "MIT",
+  "homepage": "http://index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^1.0.0-beta"
+  },
+  "private": true
+}

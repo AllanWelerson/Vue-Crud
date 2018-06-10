@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta boname="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crud VueJS</title>
+
+
+    <!-- Import Google Icon Font
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+     <link type="text/css" rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+   
+     
+     
+    
+
+</head>
+<body>
+
+
+
+    <div id="app">
+    
+            <div class="card-panel indigo lighten-2">
+                <h3 class="center-align white-text">VueJS CRUD</h3>
+            </div>
+
+             <div class="container">
+                <div class="divider"></div>
+                <h5 class="center-align indigo-text text-darken-4">Table de dados</h5>
+                    <div class="section">
+                        <table class="striped ">
+
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Nome</th>
+                                    <th>valor</th>
+                                    <th></th>
+                                </tr>
+                                
+                            </thead>
+            
+                            <tbody v-for="pessoa in pessoas">
+                                <tr>
+                                    <td>{{pessoa.id}}</td>
+                                    <td>{{pessoa.nome}}</td>
+                                    <td>{{pessoa.valor}}</td>
+                                    <td><a v-on:click="apagar(pessoa)" class="waves-effect waves-light btn indigo lighten-2">Apagar</a></td>
+                                    <td><a v-on:click="alterar(pessoa)" class="waves-effect waves-light btn indigo darken-1">Alterar</a></td>
+                                    
+                                </tr>
+                            </tbody>
+                
+                        </table>
+                    </div> 
+                      
+                <div class="divider"></div>
+            
+                <div class="section">   
+                    <div class="row">
+
+                            <h5 class="center-align indigo-text text-darken-4">Adicione mais dados</h5>
+
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s2">                                
+                                    <input type="text" id="id" class="validate" v-model="pessoa.id">
+                                    <label for="id">Id</label>
+                                </div>
+                                <div class="input-field col s6">                                
+                                    <input type="text" id="nome"  class="validate" v-model="pessoa.nome">
+                                    <label for="nome">Nome</label>
+                                </div>
+                                <div class="input-field col s4">                                  
+                                    <input type="text" id="valor" class="validate" v-model="pessoa.valor">
+                                    <label for="valor">Valor</label>
+                                </div>    
+                            </div>
+                            <div class="row">
+                                <div class="col s3 offset-s9">
+                                    <a v-on:click="gravar" class="waves-effect waves-light indigo darken-1 btn">Enviar</a>
+                                    <a v-on:click="editar" class="waves-effect waves-light indigo lighten-1 btn">Editar</a>
+                                </div>   
+                            </div>
+
+                            
+                        </form>
+                    </div>
+                
+                </div>        
+             
+            </div>
+       
+
+    </div>
+
+        <footer class="page-footer indigo lighten-3">
+            <div class="container center-align" >
+                By - <a href="http://github.com/allanwelerson">Allan Welerson</a>               
+            </div>
+            <br>
+
+        </footer>
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script> 
+  <script src="bower_components/materialize/dist/js/materialize.min.js"></script>    
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.0"></script>
+  <script src="index.js"></script>
+      
+
+
+    
+</body>
+</html>
