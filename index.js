@@ -1,14 +1,12 @@
 
-            pessoa1 = []; 
-              
-
+   
             var app = new Vue({
                 el: "#app",
                 data:{
                     
                     pessoas:[
-                        {id:'1',nome:'asfd',valor:'3333'},
-                        {id:'2',nome:'eeeeeee',valor:'2222'}
+                        {id:'1',nome:'Primeiro',valor:'1111'},
+                        {id:'2',nome:'Segundo',valor:'2222'}
                     ],
                     pessoa: {id:'',nome:'',valor:''},
                     pessoaAlterar: {}
